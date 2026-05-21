@@ -16,3 +16,25 @@
       background: #0a0c10;
       color: #eef2ff;
     }
+
+
+
+      body.dark .card, body.dark .modal-content, body.dark .admin-table-container, 
+    body.dark .form-container, body.dark .navbar, body.dark .footer {
+      background: #1e1f2a;
+      color: #eef2ff;
+      border-color: #2d2f3e;
+    }
+
+    body.dark .search-input, body.dark .filter-btn, body.dark .genre-chip, 
+    body.dark input, body.dark select, body.dark textarea {
+      background: #2a2c3b;
+      color: #eef2ff;
+      border-color: #3e4053;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
