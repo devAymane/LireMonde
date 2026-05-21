@@ -54,3 +54,13 @@
       background: rgba(18,20,28,0.92);
       border-bottom-color: #2d2f3e;
     }
+
+
+        .nav-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
