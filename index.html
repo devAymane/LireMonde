@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LireMonde · Discover Your Next Chapter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+<div class="navbar">
+  <div class="container nav-inner">
+    <div class="logo"><i class="fas fa-book-open"></i> LireMonde</div>
+    <div class="nav-links">
+      <a data-nav="home" class="active">Home</a>
+      <a data-nav="toread">To Read <span id="toReadCountBadge" style="background:#3b82f6; border-radius:20px; padding:0 6px; margin-left:5px; color:white;">0</span></a>
+      <a data-nav="admin">Admin</a>
+    </div>
+    <div class="global-search">
+      <i class="fas fa-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Search by title, author, genre...">
+    </div>
+  </div>
+</div>
+
 </body>
-</html>`
+</html>
