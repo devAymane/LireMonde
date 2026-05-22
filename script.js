@@ -299,3 +299,29 @@ window.onclick = (e) => {
   }
 };
 
+
+
+
+// ================= SEARCH =================
+searchInput.oninput = (e) => {
+  search = e.target.value;
+  render();
+};
+
+// ================= NAVIGATION =================
+document.querySelectorAll("[data-nav]").forEach(link => {
+  link.onclick = () => {
+
+    document.querySelectorAll("[data-nav]")
+      .forEach(a => a.classList.remove("active"));
+
+    link.classList.add("active");
+
+    view = link.dataset.nav;
+
+    render();
+  };
+});
+
+// ================= INIT =================
+loadBooks();
