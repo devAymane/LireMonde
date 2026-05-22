@@ -95,3 +95,30 @@ function card(book) {
     </div>
   `;
 }
+
+// ================= HOME =================
+function renderHome() {
+  const genres = ["ALL", ...new Set(books.map(b => b.genre))];
+
+  return `
+    <div class="filters-bar">
+      <div class="genre-filters">
+        ${genres.map(g => `
+          <span 
+            class="genre-chip ${genre === g ? "active" : ""}"
+            onclick="setGenre('${g}')">
+            ${g}
+          </span>
+        `).join("")}
+      </div>
+
+      <span class="badge">
+        ${filteredBooks().length} books
+      </span>
+    </div>
+
+    <div class="books-grid">
+      ${filteredBooks().map(card).join("")}
+    </div>
+  `;
+}
