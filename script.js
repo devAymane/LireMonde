@@ -122,3 +122,80 @@ function renderHome() {
     </div>
   `;
 }
+
+// ================= TO READ =================
+function renderToRead() {
+  return `
+    <h2 style="margin-top:20px">📚 My Reading List</h2>
+
+    <div class="books-grid">
+      ${filteredBooks().map(card).join("")}
+    </div>
+  `;
+}
+
+// ================= ADMIN =================
+function renderAdmin() {
+  return `
+    <div class="form-container">
+
+      <div class="form-group">
+        <input id="title" placeholder="Title">
+      </div>
+
+      <div class="form-group">
+        <input id="author" placeholder="Author">
+      </div>
+
+      <div class="form-group">
+        <input id="genreInput" placeholder="Genre">
+      </div>
+
+      <div class="form-group">
+        <input id="cover" placeholder="Cover URL">
+      </div>
+
+      <div class="form-group">
+        <textarea id="description" placeholder="Description"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button class="btn-primary" onclick="addBook()">
+          ➕ Add Book
+        </button>
+      </div>
+
+    </div>
+
+    <div class="admin-table-container">
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Actions</th>
+        </tr>
+
+        ${books.map(book => `
+          <tr>
+            <td>${book.title}</td>
+            <td>${book.author}</td>
+
+            <td>
+              <button class="btn-outline"
+                onclick="editBook(${book.id})">
+                ✏️
+              </button>
+
+              <button class="btn-outline"
+                onclick="deleteBook(${book.id})">
+                🗑️
+              </button>
+            </td>
+          </tr>
+        `).join("")}
+
+      </table>
+    </div>
+  `;
+}
+
