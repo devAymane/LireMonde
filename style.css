@@ -121,3 +121,38 @@
       font-size: 0.9rem;
       min-width: 200px;
     }
+
+
+
+
+    .btn-primary {
+      background: #3b82f6;
+      border: none;
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: #2563eb;
+      transform: scale(0.98);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #3b82f6;
+      color: #3b82f6;
+      border-radius: 40px;
+      padding: 0.4rem 1rem;
+      cursor: pointer;
+    }
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
