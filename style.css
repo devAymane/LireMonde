@@ -308,3 +308,41 @@
       padding: 1rem 0.5rem;
       border-bottom: 1px solid #e5e7eb;
     }
+
+
+
+    .form-container {
+      background: white;
+      border-radius: 28px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: end;
+    }
+
+    .form-group {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 24px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    button, .genre-chip, .toRead-btn, .nav-links a { 
+      cursor: pointer; 
+    }
+
