@@ -199,3 +199,103 @@ function renderAdmin() {
   `;
 }
 
+
+// ================= RENDER =================
+function render() {
+  if (view === "home") {
+    app.innerHTML = renderHome();
+  }
+
+  if (view === "toread") {
+    app.innerHTML = renderToRead();
+  }
+
+  if (view === "admin") {
+    app.innerHTML = renderAdmin();
+  }
+}
+
+// ================= ACTIONS =================
+function setGenre(g) {
+  genre = g;
+  render();
+}
+
+async function toggleRead(e, id) {
+  e.stopPropagation();
+
+  const book = books.find(b => b.id == id);
+
+  await api.update(id, {
+    toRead: !book.toRead
+  });
+
+  loadBooks();
+}
+
+async function addBook() {
+  const data = {
+    title: title.value,
+    author: author.value,
+    genre: genreInput.value,
+    cover: cover.value,
+    description: description.value,
+    toRead: false
+  };
+
+  await api.add(data);
+
+  loadBooks();
+}
+
+async function deleteBook(id) {
+  if (!confirm("Delete ?")) return;
+
+  await api.delete(id);
+
+  loadBooks();
+}
+
+async function editBook(id) {
+  const book = books.find(b => b.id == id);
+
+  const title = prompt("Title", book.title);
+  const author = prompt("Author", book.author);
+
+  await api.update(id, { title, author });
+
+  loadBooks();
+}
+
+// ================= MODAL =================
+async function showBook(id) {
+  const book = await api.getOne(id);
+
+  modalBody.innerHTML = `
+    <div style="display:flex;gap:20px;flex-wrap:wrap">
+      <img src="${book.cover}"
+        style="width:150px;border-radius:16px">
+
+      <div>
+        <h2>${book.title}</h2>
+        <p>${book.author}</p>
+        <p>${book.genre}</p>
+        <br>
+        <p>${book.description}</p>
+      </div>
+    </div>
+  `;
+
+  modal.style.display = "flex";
+}
+
+document.querySelector(".modal-close").onclick = () => {
+  modal.style.display = "none";
+};
+
+window.onclick = (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
