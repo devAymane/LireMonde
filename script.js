@@ -72,3 +72,26 @@ function filteredBooks() {
 
   return data;
 }
+
+
+// ================= CARD =================
+function card(book) {
+  return `
+    <div class="card" onclick="showBook(${book.id})">
+      <div class="card-img"
+        style="background-image:url('${book.cover}')">
+      </div>
+
+      <div class="card-content">
+        <div class="card-title">${book.title}</div>
+        <div class="card-author">${book.author}</div>
+        <div class="card-genre">${book.genre}</div>
+
+        <button class="toRead-btn ${book.toRead ? "active" : ""}"
+          onclick="toggleRead(event, ${book.id})">
+          ${book.toRead ? "✔️ In To Read" : "📖 Add to Read"}
+        </button>
+      </div>
+    </div>
+  `;
+}
