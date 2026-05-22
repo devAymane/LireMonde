@@ -156,3 +156,57 @@
       gap: 2rem;
       margin: 2rem 0;
     }
+
+
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.1);
+      transition: transform 0.25s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 36px -12px rgba(0,0,0,0.2);
+    }
+
+    .card-img {
+      height: 260px;
+      background-size: cover;
+      background-position: center;
+      background-color: #ddd;
+      position: relative;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .card-author {
+      font-size: 0.8rem;
+      color: #6c757d;
+    }
+
+    body.dark .card-author {
+      color: #a0a5b5;
+    }
+
+    .card-genre {
+      display: inline-block;
+      background: #eef2ff;
+      border-radius: 30px;
+      padding: 0.2rem 0.8rem;
+      font-size: 0.7rem;
+      margin-top: 0.5rem;
+    }
+
+
+    
