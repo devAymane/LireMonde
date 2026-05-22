@@ -1,0 +1,77 @@
+{
+  "livres": [
+    {
+      "id": "1",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "genre": "Sci-Fi",
+      "description": "Paul Atreides, un jeune homme aux capacités exceptionnelles, doit naviguer dans les intrigues politiques de la planète désertique Arrakis, seule source de l'épice la plus précieuse de l'univers.",
+      "cover": "https://covers.openlibrary.org/b/id/8221206-L.jpg",
+      "toRead": false
+    },
+    {
+      "id": "2",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Classic",
+      "description": "L'histoire d'Elizabeth Bennet et de sa famille alors qu'elle navigue dans les questions de mariage, de morale et de fierté dans l'Angleterre du début du XIXe siècle.",
+      "cover": "https://covers.openlibrary.org/b/id/8219633-L.jpg",
+      "toRead": false
+    },
+    {
+      "id": "3",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Classic",
+      "description": "Le mystérieux Jay Gatsby organise des fêtes extravagantes dans l'espoir de reconquérir l'amour perdu, Daisy Buchanan, dans les années folles de New York.",
+      "cover": "https://covers.openlibrary.org/b/id/8222023-L.jpg",
+      "toRead": true
+    },
+    {
+      "id": "4",
+      "title": "Foundation",
+      "author": "Isaac Asimov",
+      "genre": "Sci-Fi",
+      "description": "Hari Seldon prédit la chute de l'Empire galactique et crée une Fondation pour préserver la connaissance et réduire l'âge des ténèbres à venir.",
+      "cover": "https://covers.openlibrary.org/b/id/8222010-L.jpg",
+      "toRead": false
+    },
+    {
+      "id": "5",
+      "title": "Hamlet",
+      "author": "William Shakespeare",
+      "genre": "Drama",
+      "description": "Le prince Hamlet cherche à venger la mort de son père, assassiné par son oncle qui a usurpé le trône et épousé sa mère.",
+      "cover": "https://covers.openlibrary.org/b/id/8219982-L.jpg",
+      "toRead": false
+    },
+    {
+      "id": "6",
+      "title": "The Name of the Wind",
+      "author": "Patrick Rothfuss",
+      "genre": "Fantasy",
+      "description": "Kvothe raconte son ascension légendaire de vagabond à l'étudiant le plus célèbre de l'Université, maîtrisant la magie et la musique.",
+      "cover": "https://covers.openlibrary.org/b/id/8221370-L.jpg",
+      "toRead": false
+    },
+    {
+      "title": "hhfhf",
+      "author": "wkke",
+      "genre": "kd",
+      "description": "f",
+      "cover": "d",
+      "toRead": false,
+      "id": "DhdcXx69uRw"
+    },
+    {
+      "title": "j",
+      "author": "jjj",
+      "genre": "vggyg",
+      "cover": "bg",
+      "description": "hhh",
+      "toRead": false,
+      "id": "W5Mi20CrPus"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
